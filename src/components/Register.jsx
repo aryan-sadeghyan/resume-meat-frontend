@@ -21,13 +21,13 @@ export default function Register() {
       }),
     });
     const info = await res.json();
+    console.log(info);
 
     if (!info.success) {
-      setShowerror(info.error);
+      return setShowerror(info.error);
     }
     setToken(info.token);
     localStorage.setItem("token", info.token);
-
     navigate("/");
   }
 

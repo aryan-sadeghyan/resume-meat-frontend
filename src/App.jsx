@@ -35,6 +35,7 @@ function App() {
       },
     });
     const info = await res.json();
+    console.log(info);
     if (info.success) {
       setUser(info.user);
     }
